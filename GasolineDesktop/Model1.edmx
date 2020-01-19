@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GasolineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__EFMigrationsHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FuelType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FuelName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="GasStation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Street" Type="nvarchar(max)" />
+          <Property Name="PostalCode" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="GasStationFuel">
+          <Key>
+            <PropertyRef Name="FuelTypeId" />
+            <PropertyRef Name="GasStationId" />
+          </Key>
+          <Property Name="FuelTypeId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="GasStationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="LastUpdateUtc" Type="datetime2" Precision="7" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_GasStationFuel_FuelType_FuelTypeId">
+          <End Role="FuelType" Type="Self.FuelType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="GasStationFuel" Type="Self.GasStationFuel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FuelType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GasStationFuel">
+              <PropertyRef Name="FuelTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GasStationFuel_GasStation_GasStationId">
+          <End Role="GasStation" Type="Self.GasStation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="GasStationFuel" Type="Self.GasStationFuel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GasStation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GasStationFuel">
+              <PropertyRef Name="GasStationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GasolineModelStoreContainer">
+          <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FuelType" EntityType="Self.FuelType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GasStation" EntityType="Self.GasStation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GasStationFuel" EntityType="Self.GasStationFuel" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_GasStationFuel_FuelType_FuelTypeId" Association="Self.FK_GasStationFuel_FuelType_FuelTypeId">
+            <End Role="FuelType" EntitySet="FuelType" />
+            <End Role="GasStationFuel" EntitySet="GasStationFuel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GasStationFuel_GasStation_GasStationId" Association="Self.FK_GasStationFuel_GasStation_GasStationId">
+            <End Role="GasStation" EntitySet="GasStation" />
+            <End Role="GasStationFuel" EntitySet="GasStationFuel" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GasolineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__EFMigrationsHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FuelType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="FuelName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GasStationFuels" Relationship="Self.FK_GasStationFuel_FuelType_FuelTypeId" FromRole="FuelType" ToRole="GasStationFuel" />
+        </EntityType>
+        <EntityType Name="GasStation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GasStationFuels" Relationship="Self.FK_GasStationFuel_GasStation_GasStationId" FromRole="GasStation" ToRole="GasStationFuel" />
+        </EntityType>
+        <EntityType Name="GasStationFuel">
+          <Key>
+            <PropertyRef Name="FuelTypeId" />
+            <PropertyRef Name="GasStationId" />
+          </Key>
+          <Property Name="FuelTypeId" Type="Guid" Nullable="false" />
+          <Property Name="GasStationId" Type="Guid" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="LastUpdateUtc" Type="DateTime" Nullable="false" Precision="7" />
+          <NavigationProperty Name="FuelType" Relationship="Self.FK_GasStationFuel_FuelType_FuelTypeId" FromRole="GasStationFuel" ToRole="FuelType" />
+          <NavigationProperty Name="GasStation" Relationship="Self.FK_GasStationFuel_GasStation_GasStationId" FromRole="GasStationFuel" ToRole="GasStation" />
+        </EntityType>
+        <Association Name="FK_GasStationFuel_FuelType_FuelTypeId">
+          <End Role="FuelType" Type="Self.FuelType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="GasStationFuel" Type="Self.GasStationFuel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FuelType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GasStationFuel">
+              <PropertyRef Name="FuelTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GasStationFuel_GasStation_GasStationId">
+          <End Role="GasStation" Type="Self.GasStation" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="GasStationFuel" Type="Self.GasStationFuel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GasStation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GasStationFuel">
+              <PropertyRef Name="GasStationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GasolineEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+          <EntitySet Name="FuelTypes" EntityType="Self.FuelType" />
+          <EntitySet Name="GasStations" EntityType="Self.GasStation" />
+          <EntitySet Name="GasStationFuels" EntityType="Self.GasStationFuel" />
+          <AssociationSet Name="FK_GasStationFuel_FuelType_FuelTypeId" Association="Self.FK_GasStationFuel_FuelType_FuelTypeId">
+            <End Role="FuelType" EntitySet="FuelTypes" />
+            <End Role="GasStationFuel" EntitySet="GasStationFuels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GasStationFuel_GasStation_GasStationId" Association="Self.FK_GasStationFuel_GasStation_GasStationId">
+            <End Role="GasStation" EntitySet="GasStations" />
+            <End Role="GasStationFuel" EntitySet="GasStationFuels" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GasolineModelStoreContainer" CdmEntityContainer="GasolineEntities1">
+          <EntitySetMapping Name="C__EFMigrationsHistory">
+            <EntityTypeMapping TypeName="GasolineModel.C__EFMigrationsHistory">
+              <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FuelTypes">
+            <EntityTypeMapping TypeName="GasolineModel.FuelType">
+              <MappingFragment StoreEntitySet="FuelType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FuelName" ColumnName="FuelName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GasStations">
+            <EntityTypeMapping TypeName="GasolineModel.GasStation">
+              <MappingFragment StoreEntitySet="GasStation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GasStationFuels">
+            <EntityTypeMapping TypeName="GasolineModel.GasStationFuel">
+              <MappingFragment StoreEntitySet="GasStationFuel">
+                <ScalarProperty Name="FuelTypeId" ColumnName="FuelTypeId" />
+                <ScalarProperty Name="GasStationId" ColumnName="GasStationId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="LastUpdateUtc" ColumnName="LastUpdateUtc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

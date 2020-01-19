@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['gasolinedesktop',['GasolineDesktop',['../namespace_gasoline_desktop.html',1,'']]],
+  ['gasolinedesktop_5fcontent_2eg_2ecs',['GasolineDesktop_Content.g.cs',['../_gasoline_desktop___content_8g_8cs.html',1,'']]],
+  ['gasolinedesktop_5fcontent_2eg_2ei_2ecs',['GasolineDesktop_Content.g.i.cs',['../_gasoline_desktop___content_8g_8i_8cs.html',1,'']]],
+  ['gasolineentities1',['GasolineEntities1',['../class_gasoline_desktop_1_1_gasoline_entities1.html',1,'GasolineDesktop.GasolineEntities1'],['../class_gasoline_desktop_1_1_gasoline_entities1.html#a3c61819e52e5b6bb466b44324b1cfbc6',1,'GasolineDesktop.GasolineEntities1.GasolineEntities1()']]],
+  ['gasolineservice',['GasolineService',['../class_gasoline_desktop_1_1_gasoline_service.html',1,'GasolineDesktop.GasolineService'],['../class_gasoline_desktop_1_1_gasoline_service.html#a86ac56afab474bdc68c4682f1bb50a32',1,'GasolineDesktop.GasolineService.GasolineService()']]],
+  ['gasolineservice_2ecs',['GasolineService.cs',['../_gasoline_service_8cs.html',1,'']]],
+  ['gasstation',['GasStation',['../class_gasoline_desktop_1_1_gas_station.html',1,'GasolineDesktop.GasStation'],['../class_gasoline_desktop_1_1_gas_station_fuel.html#a1666f2cd2bf75e71cdf8399adce75e5d',1,'GasolineDesktop.GasStationFuel.GasStation()'],['../class_gasoline_desktop_1_1_gas_station.html#a36a4c7b8bacf43e445e1f75ad2f057d0',1,'GasolineDesktop.GasStation.GasStation()']]],
+  ['gasstation_2ecs',['GasStation.cs',['../_gas_station_8cs.html',1,'']]],
+  ['gasstationfuel',['GasStationFuel',['../class_gasoline_desktop_1_1_gas_station_fuel.html',1,'GasolineDesktop']]],
+  ['gasstationfuel_2ecs',['GasStationFuel.cs',['../_gas_station_fuel_8cs.html',1,'']]],
+  ['gasstationfuels',['GasStationFuels',['../class_gasoline_desktop_1_1_fuel_type.html#a208607681ba906422bf22dd278caebd8',1,'GasolineDesktop.FuelType.GasStationFuels()'],['../class_gasoline_desktop_1_1_gas_station.html#af3f36d113c7ac64532ac0cf3630cc8f6',1,'GasolineDesktop.GasStation.GasStationFuels()'],['../class_gasoline_desktop_1_1_gasoline_entities1.html#a6737cc16941ef917417d1e569e4c8af3',1,'GasolineDesktop.GasolineEntities1.GasStationFuels()']]],
+  ['gasstationid',['GasStationId',['../class_gasoline_desktop_1_1_gas_station_fuel.html#a2d5583d6785a151c21bddd6e827176e2',1,'GasolineDesktop::GasStationFuel']]],
+  ['gasstations',['GasStations',['../class_gasoline_desktop_1_1_gasoline_entities1.html#ab83012308cfb0a8b705e3119d2d2cf9f',1,'GasolineDesktop::GasolineEntities1']]],
+  ['getallfueltypes',['GetAllFuelTypes',['../class_gasoline_desktop_1_1_gasoline_service.html#af0f2d5757051b9680eccc8c2a592aaf2',1,'GasolineDesktop::GasolineService']]],
+  ['getallgasstations',['GetAllGasStations',['../class_gasoline_desktop_1_1_gasoline_service.html#a646a98b8e8448ae95039893eeacb4607',1,'GasolineDesktop::GasolineService']]],
+  ['getgasstationbyid',['GetGasStationById',['../class_gasoline_desktop_1_1_gasoline_service.html#a31cda76e3c9ed7c52935c42808704669',1,'GasolineDesktop::GasolineService']]],
+  ['getgasstationfuelsbyfuelid',['GetGasStationFuelsByFuelId',['../class_gasoline_desktop_1_1_gasoline_service.html#ad3d04448aa5de9033059fa6b79caaa4d',1,'GasolineDesktop::GasolineService']]],
+  ['gasolinedesktop',['GasolineDesktop',['../md__c_1__users_wilcz_source_repos__gasoline_desktop__r_e_a_d_m_e.html',1,'']]],
+  ['properties',['Properties',['../namespace_gasoline_desktop_1_1_properties.html',1,'GasolineDesktop']]],
+  ['tests',['Tests',['../namespace_gasoline_desktop_1_1_tests.html',1,'GasolineDesktop']]]
+];

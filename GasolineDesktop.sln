@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasolineDesktop", "GasolineDesktop\GasolineDesktop.csproj", "{35BC09FE-467A-43AB-907B-1F50FB984E00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasolineDesktop.Tests", "GasolineDesktop.Tests\GasolineDesktop.Tests.csproj", "{0B11FB79-AD0D-477C-977C-D289E075AB2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35BC09FE-467A-43AB-907B-1F50FB984E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BC09FE-467A-43AB-907B-1F50FB984E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BC09FE-467A-43AB-907B-1F50FB984E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BC09FE-467A-43AB-907B-1F50FB984E00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B11FB79-AD0D-477C-977C-D289E075AB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B11FB79-AD0D-477C-977C-D289E075AB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B11FB79-AD0D-477C-977C-D289E075AB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B11FB79-AD0D-477C-977C-D289E075AB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E67D41FC-81E7-4023-AB48-C35F54BF88E3}
+	EndGlobalSection
+EndGlobal

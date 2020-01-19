@@ -1,0 +1,138 @@
+\hypertarget{class_gasoline_desktop_1_1_gasoline_service}{}\section{Gasoline\+Desktop.\+Gasoline\+Service Class Reference}
+\label{class_gasoline_desktop_1_1_gasoline_service}\index{GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gasoline_desktop_1_1_gasoline_service_a86ac56afab474bdc68c4682f1bb50a32}{Gasoline\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_gasoline_desktop_1_1_fuel_type}{Fuel\+Type}} $>$ \mbox{\hyperlink{class_gasoline_desktop_1_1_gasoline_service_af0f2d5757051b9680eccc8c2a592aaf2}{Get\+All\+Fuel\+Types}} ()
+\begin{DoxyCompactList}\small\item\em Pobranie wszystkich rekordów z tabeli Fuel\+Types \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}} \mbox{\hyperlink{class_gasoline_desktop_1_1_gasoline_service_a896898680fc2723a823401d8d1213c06}{Add\+Gas\+Station}} (\mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}} gas\+Station)
+\begin{DoxyCompactList}\small\item\em Dodanie nowej stacji do bazy \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}} $>$ \mbox{\hyperlink{class_gasoline_desktop_1_1_gasoline_service_a646a98b8e8448ae95039893eeacb4607}{Get\+All\+Gas\+Stations}} ()
+\begin{DoxyCompactList}\small\item\em Pobranie wszystkich rekordów z tabeli Gas\+Stations \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}} \mbox{\hyperlink{class_gasoline_desktop_1_1_gasoline_service_a31cda76e3c9ed7c52935c42808704669}{Get\+Gas\+Station\+By\+Id}} (Guid guid)
+\begin{DoxyCompactList}\small\item\em Wyszukanie stacji paliw po jej Guid \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gasoline_desktop_1_1_gasoline_service_a613bb5610a147c3127af3a6214fb8648}{Remove\+Gas\+Station}} (Guid guid)
+\begin{DoxyCompactList}\small\item\em Usunięcie stacji z bazy \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station_fuel}{Gas\+Station\+Fuel}} $>$ \mbox{\hyperlink{class_gasoline_desktop_1_1_gasoline_service_ad3d04448aa5de9033059fa6b79caaa4d}{Get\+Gas\+Station\+Fuels\+By\+Fuel\+Id}} (Guid fuel\+Id)
+\begin{DoxyCompactList}\small\item\em Wyszukanie wszyskich stacji na których znajduje się dane paliwo \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_gasoline_desktop_1_1_gasoline_service_a86ac56afab474bdc68c4682f1bb50a32}\label{class_gasoline_desktop_1_1_gasoline_service_a86ac56afab474bdc68c4682f1bb50a32}} 
+\index{GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}!GasolineService@{GasolineService}}
+\index{GasolineService@{GasolineService}!GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}}
+\subsubsection{\texorpdfstring{GasolineService()}{GasolineService()}}
+{\footnotesize\ttfamily Gasoline\+Desktop.\+Gasoline\+Service.\+Gasoline\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gasoline_desktop_1_1_gasoline_service_a896898680fc2723a823401d8d1213c06}\label{class_gasoline_desktop_1_1_gasoline_service_a896898680fc2723a823401d8d1213c06}} 
+\index{GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}!AddGasStation@{AddGasStation}}
+\index{AddGasStation@{AddGasStation}!GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}}
+\subsubsection{\texorpdfstring{AddGasStation()}{AddGasStation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}} Gasoline\+Desktop.\+Gasoline\+Service.\+Add\+Gas\+Station (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}}}]{gas\+Station }\end{DoxyParamCaption})}
+
+
+
+Dodanie nowej stacji do bazy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gas\+Station} & Instancja klasy \mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Utworzony rekord
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gasoline_desktop_1_1_gasoline_service_af0f2d5757051b9680eccc8c2a592aaf2}\label{class_gasoline_desktop_1_1_gasoline_service_af0f2d5757051b9680eccc8c2a592aaf2}} 
+\index{GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}!GetAllFuelTypes@{GetAllFuelTypes}}
+\index{GetAllFuelTypes@{GetAllFuelTypes}!GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}}
+\subsubsection{\texorpdfstring{GetAllFuelTypes()}{GetAllFuelTypes()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_gasoline_desktop_1_1_fuel_type}{Fuel\+Type}}$>$ Gasoline\+Desktop.\+Gasoline\+Service.\+Get\+All\+Fuel\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobranie wszystkich rekordów z tabeli Fuel\+Types 
+
+\begin{DoxyReturn}{Returns}
+Lista wszystkich Fuel\+Types
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gasoline_desktop_1_1_gasoline_service_a646a98b8e8448ae95039893eeacb4607}\label{class_gasoline_desktop_1_1_gasoline_service_a646a98b8e8448ae95039893eeacb4607}} 
+\index{GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}!GetAllGasStations@{GetAllGasStations}}
+\index{GetAllGasStations@{GetAllGasStations}!GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}}
+\subsubsection{\texorpdfstring{GetAllGasStations()}{GetAllGasStations()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}}$>$ Gasoline\+Desktop.\+Gasoline\+Service.\+Get\+All\+Gas\+Stations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobranie wszystkich rekordów z tabeli Gas\+Stations 
+
+\begin{DoxyReturn}{Returns}
+Lista wszystkich \mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}}
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gasoline_desktop_1_1_gasoline_service_a31cda76e3c9ed7c52935c42808704669}\label{class_gasoline_desktop_1_1_gasoline_service_a31cda76e3c9ed7c52935c42808704669}} 
+\index{GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}!GetGasStationById@{GetGasStationById}}
+\index{GetGasStationById@{GetGasStationById}!GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}}
+\subsubsection{\texorpdfstring{GetGasStationById()}{GetGasStationById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station}{Gas\+Station}} Gasoline\+Desktop.\+Gasoline\+Service.\+Get\+Gas\+Station\+By\+Id (\begin{DoxyParamCaption}\item[{Guid}]{guid }\end{DoxyParamCaption})}
+
+
+
+Wyszukanie stacji paliw po jej Guid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & Guid szukanego elementu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stacja paliw
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gasoline_desktop_1_1_gasoline_service_ad3d04448aa5de9033059fa6b79caaa4d}\label{class_gasoline_desktop_1_1_gasoline_service_ad3d04448aa5de9033059fa6b79caaa4d}} 
+\index{GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}!GetGasStationFuelsByFuelId@{GetGasStationFuelsByFuelId}}
+\index{GetGasStationFuelsByFuelId@{GetGasStationFuelsByFuelId}!GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}}
+\subsubsection{\texorpdfstring{GetGasStationFuelsByFuelId()}{GetGasStationFuelsByFuelId()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_gasoline_desktop_1_1_gas_station_fuel}{Gas\+Station\+Fuel}}$>$ Gasoline\+Desktop.\+Gasoline\+Service.\+Get\+Gas\+Station\+Fuels\+By\+Fuel\+Id (\begin{DoxyParamCaption}\item[{Guid}]{fuel\+Id }\end{DoxyParamCaption})}
+
+
+
+Wyszukanie wszyskich stacji na których znajduje się dane paliwo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fuel\+Id} & Guid szukanego paliwa\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista stacji paliw z szukanym typem paliwa
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gasoline_desktop_1_1_gasoline_service_a613bb5610a147c3127af3a6214fb8648}\label{class_gasoline_desktop_1_1_gasoline_service_a613bb5610a147c3127af3a6214fb8648}} 
+\index{GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}!RemoveGasStation@{RemoveGasStation}}
+\index{RemoveGasStation@{RemoveGasStation}!GasolineDesktop.GasolineService@{GasolineDesktop.GasolineService}}
+\subsubsection{\texorpdfstring{RemoveGasStation()}{RemoveGasStation()}}
+{\footnotesize\ttfamily bool Gasoline\+Desktop.\+Gasoline\+Service.\+Remove\+Gas\+Station (\begin{DoxyParamCaption}\item[{Guid}]{guid }\end{DoxyParamCaption})}
+
+
+
+Usunięcie stacji z bazy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & Guid usuwanej stacji\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jeżeli znaleziono i usunięto, false jeśli nie
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_gasoline_service_8cs}{Gasoline\+Service.\+cs}}\end{DoxyCompactItemize}
